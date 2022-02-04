@@ -1,4 +1,4 @@
-# GraphicsFigures
+# Graphic Figures
 What i've learned:
 - Woking with the .NET Framework.
 - The 4 pillarts of OOP (Inheritance, Encapsulation, Abstraction, Polymorphism).
