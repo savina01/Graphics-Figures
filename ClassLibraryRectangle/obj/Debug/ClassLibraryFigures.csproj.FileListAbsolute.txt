@@ -4,3 +4,9 @@ C:\Users\user\Desktop\uni\2 семестър\Курсов проект\ClassLibr
 C:\Users\user\Desktop\uni\2 семестър\Курсов проект\ClassLibraryRectangle\obj\Debug\ClassLibraryFigures.csproj.CoreCompileInputs.cache
 C:\Users\user\Desktop\uni\2 семестър\Курсов проект\ClassLibraryRectangle\obj\Debug\ClassLibraryFigures.dll
 C:\Users\user\Desktop\uni\2 семестър\Курсов проект\ClassLibraryRectangle\obj\Debug\ClassLibraryFigures.pdb
+C:\Users\user\Desktop\uni\2 семестър\GraphicFigures\ClassLibraryRectangle\bin\Debug\ClassLibraryFigures.dll
+C:\Users\user\Desktop\uni\2 семестър\GraphicFigures\ClassLibraryRectangle\bin\Debug\ClassLibraryFigures.pdb
+C:\Users\user\Desktop\uni\2 семестър\GraphicFigures\ClassLibraryRectangle\obj\Debug\ClassLibraryFigures.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\uni\2 семестър\GraphicFigures\ClassLibraryRectangle\obj\Debug\ClassLibraryFigures.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\uni\2 семестър\GraphicFigures\ClassLibraryRectangle\obj\Debug\ClassLibraryFigures.dll
+C:\Users\user\Desktop\uni\2 семестър\GraphicFigures\ClassLibraryRectangle\obj\Debug\ClassLibraryFigures.pdb

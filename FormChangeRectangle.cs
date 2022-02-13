@@ -1,22 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using CourseProject.Figures;
 
 namespace CourseProject
 {
     public partial class FormChange : Form
     {
-        // само за FormChangeRectangle
-        //  а не като цяло за всички фигури
-
-        public FormChange()
+        public FormChange()         //  FormChangeRectangle
         {
             InitializeComponent();
         }
@@ -25,10 +15,7 @@ namespace CourseProject
         private Color? _color;
         public int MyWidth
         {
-            get
-            {
-                return _Width;
-            }
+            get => _Width;
             set
             {
                 _Width = value;
@@ -37,10 +24,7 @@ namespace CourseProject
         }
         public int MyHeight
         {
-            get
-            {
-                return _Height;
-            }
+            get => _Height;
             set
             {
                 _Height = value;
@@ -49,10 +33,7 @@ namespace CourseProject
         }
         public Color? MyColor
         {
-            get
-            {
-                return _color;
-            }
+            get => _color;
             set
             {
                 _color = value;

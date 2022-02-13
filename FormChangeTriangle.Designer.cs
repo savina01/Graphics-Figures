@@ -34,6 +34,10 @@ namespace CourseProject
             this.labelColor = new System.Windows.Forms.Label();
             this.buttonColor = new System.Windows.Forms.Button();
             this.panelButtons = new System.Windows.Forms.Panel();
+            this.labelSide = new System.Windows.Forms.Label();
+            this.labelaHeight = new System.Windows.Forms.Label();
+            this.textBoxSide = new System.Windows.Forms.TextBox();
+            this.textBoxHeight = new System.Windows.Forms.TextBox();
             this.panelButtons.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,17 +67,17 @@ namespace CourseProject
             // labelColor
             // 
             this.labelColor.AutoSize = true;
-            this.labelColor.Location = new System.Drawing.Point(12, 9);
+            this.labelColor.Location = new System.Drawing.Point(12, 104);
             this.labelColor.Name = "labelColor";
-            this.labelColor.Size = new System.Drawing.Size(45, 17);
+            this.labelColor.Size = new System.Drawing.Size(42, 16);
             this.labelColor.TabIndex = 4;
             this.labelColor.Text = "Color:";
             // 
             // buttonColor
             // 
-            this.buttonColor.Location = new System.Drawing.Point(12, 29);
+            this.buttonColor.Location = new System.Drawing.Point(12, 127);
             this.buttonColor.Name = "buttonColor";
-            this.buttonColor.Size = new System.Drawing.Size(115, 29);
+            this.buttonColor.Size = new System.Drawing.Size(363, 23);
             this.buttonColor.TabIndex = 5;
             this.buttonColor.UseVisualStyleBackColor = true;
             this.buttonColor.Click += new System.EventHandler(this.buttonColor_Click);
@@ -82,10 +86,42 @@ namespace CourseProject
             // 
             this.panelButtons.Controls.Add(this.buttonOK);
             this.panelButtons.Controls.Add(this.buttonCancel);
-            this.panelButtons.Location = new System.Drawing.Point(182, 29);
+            this.panelButtons.Location = new System.Drawing.Point(220, 166);
             this.panelButtons.Name = "panelButtons";
             this.panelButtons.Size = new System.Drawing.Size(155, 29);
             this.panelButtons.TabIndex = 6;
+            // 
+            // labelSide
+            // 
+            this.labelSide.AutoSize = true;
+            this.labelSide.Location = new System.Drawing.Point(12, 9);
+            this.labelSide.Name = "labelSide";
+            this.labelSide.Size = new System.Drawing.Size(35, 16);
+            this.labelSide.TabIndex = 7;
+            this.labelSide.Text = "Side";
+            // 
+            // labelaHeight
+            // 
+            this.labelaHeight.AutoSize = true;
+            this.labelaHeight.Location = new System.Drawing.Point(12, 56);
+            this.labelaHeight.Name = "labelaHeight";
+            this.labelaHeight.Size = new System.Drawing.Size(46, 16);
+            this.labelaHeight.TabIndex = 8;
+            this.labelaHeight.Text = "Height";
+            // 
+            // textBoxSide
+            // 
+            this.textBoxSide.Location = new System.Drawing.Point(12, 31);
+            this.textBoxSide.Name = "textBoxSide";
+            this.textBoxSide.Size = new System.Drawing.Size(363, 22);
+            this.textBoxSide.TabIndex = 9;
+            // 
+            // textBoxHeight
+            // 
+            this.textBoxHeight.Location = new System.Drawing.Point(12, 79);
+            this.textBoxHeight.Name = "textBoxHeight";
+            this.textBoxHeight.Size = new System.Drawing.Size(363, 22);
+            this.textBoxHeight.TabIndex = 10;
             // 
             // FormChangeTriangle
             // 
@@ -93,7 +129,11 @@ namespace CourseProject
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(346, 87);
+            this.ClientSize = new System.Drawing.Size(387, 207);
+            this.Controls.Add(this.textBoxHeight);
+            this.Controls.Add(this.textBoxSide);
+            this.Controls.Add(this.labelaHeight);
+            this.Controls.Add(this.labelSide);
             this.Controls.Add(this.panelButtons);
             this.Controls.Add(this.buttonColor);
             this.Controls.Add(this.labelColor);
@@ -114,5 +154,9 @@ namespace CourseProject
         private System.Windows.Forms.Label labelColor;
         private System.Windows.Forms.Button buttonColor;
         private System.Windows.Forms.Panel panelButtons;
+        private System.Windows.Forms.Label labelSide;
+        private System.Windows.Forms.Label labelaHeight;
+        private System.Windows.Forms.TextBox textBoxSide;
+        private System.Windows.Forms.TextBox textBoxHeight;
     }
 }

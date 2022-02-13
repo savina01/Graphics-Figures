@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using CourseProject.Figures;
 
 namespace CourseProject
 {
@@ -17,13 +10,30 @@ namespace CourseProject
         {
             InitializeComponent();
         }
+        private int _Side;
+        private int _Height;
         private Color? _color;
+        public int MySide
+        {
+            get => _Side;
+            set
+            {
+                _Side = value;
+                textBoxSide.Text = _Side.ToString();
+            }
+        }
+        public int MyHeight
+        {
+            get => _Height;
+            set
+            {
+                _Height = value;
+                textBoxHeight.Text = _Height.ToString();
+            }
+        }
         public Color? MyColor
         {
-            get
-            {
-                return _color;
-            }
+            get => _color;
             set
             {
                 _color = value;
@@ -32,11 +42,21 @@ namespace CourseProject
         }
         private void buttonOK_Click(object sender, EventArgs e)
         {
+            MySide = int.Parse(textBoxSide.Text);
+            MyHeight = int.Parse(textBoxHeight.Text);
+
             DialogResult = DialogResult.OK;
         }
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
+        }
+        public void ColorChange()
+        {
+            var cd = new ColorDialog();
+            MyColor = cd.ShowDialog() == DialogResult.OK
+                ? cd.Color
+                : (Color?)null;
         }
 
         private void buttonColor_Click(object sender, EventArgs e)

@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CourseProject.Figures;
 
@@ -419,21 +416,24 @@ namespace CourseProject
 
             if (rectangle != null)
             {
-                var fc = new FormChange();
-                fc.MyWidth = rectangle.Width;
-                fc.MyHeight = rectangle.Height;
-                fc.MyColor = rectangle.Color;
-
-                if (fc.ShowDialog() == DialogResult.OK)
+                if (radioButtonRectangle.Checked)
                 {
-                    rectangle.Width = fc.MyWidth;
-                    rectangle.Height = fc.MyHeight;
-                    rectangle.Color = (Color)fc.MyColor;
-                }
-                RefreshAreaRectangle();
-                RefreshPerimeterRectangle();
+                    var fc = new FormChange();         //FormChangeRectangle
+                    fc.MyWidth = rectangle.Width;
+                    fc.MyHeight = rectangle.Height;
+                    fc.MyColor = rectangle.Color;
 
-                Invalidate();
+                    if (fc.ShowDialog() == DialogResult.OK)
+                    {
+                        rectangle.Width = fc.MyWidth;
+                        rectangle.Height = fc.MyHeight;
+                        rectangle.Color = (Color)fc.MyColor;
+                    }
+                    RefreshAreaRectangle();
+                    RefreshPerimeterRectangle();
+
+                    Invalidate();
+                }
             }
 
             var triangle = _triangles
@@ -441,17 +441,24 @@ namespace CourseProject
 
             if (triangle != null)
             {
-                var fc = new FormChangeTriangle();
-                fc.MyColor = triangle.Color;
-
-                if (fc.ShowDialog() == DialogResult.OK)
+                if (radioButtonTriangle.Checked)
                 {
-                    triangle.Color = (Color)fc.MyColor;
-                }
-                RefreshAreaTriangle();
-                RefreshPerimeterTriangle();
+                    var fc = new FormChangeTriangle();
+                    fc.MyColor = triangle.Color;
+                    fc.MySide = triangle.Side;
+                    fc.MyHeight = triangle.Height;
 
-                Invalidate();
+                    if (fc.ShowDialog() == DialogResult.OK)
+                    {
+                        triangle.Color = (Color)fc.MyColor;
+                        triangle.Side = fc.MySide;
+                        triangle.Height = fc.MyHeight;
+                    }
+                    RefreshAreaTriangle();
+                    RefreshPerimeterTriangle();
+
+                    Invalidate();
+                }
             }
 
             var circle = _circle
@@ -505,12 +512,11 @@ namespace CourseProject
         {
             var formatter = new BinaryFormatter();
 
-            //трябва да се направи поне 1 правоъгълник, триъгълник и кръг, за да работи програмата при стартиране, иначе ще гръмне
-            using (var stream = new FileStream("data", FileMode.Create))
-            {
-                    formatter.Serialize(stream, _rectangles);
-                    formatter.Serialize(stream, _triangles);
-                    formatter.Serialize(stream, _circle);
+            using (var stream = new FileStream("data", FileMode.OpenOrCreate))
+            {       
+                formatter.Serialize(stream, _rectangles);
+                formatter.Serialize(stream, _triangles); 
+                formatter.Serialize(stream, _circle);
             }
         }
         private void FormScene_Load(object sender, EventArgs e)
