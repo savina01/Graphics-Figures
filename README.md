@@ -10,5 +10,5 @@ What i've learned:
 - Export to an external library.
 
 # Demo
-- Creating
+- Creating figures
 https://user-images.githubusercontent.com/75179050/153756501-01dda6b7-bbd3-4136-b9ec-2a751780d4cc.mp4
